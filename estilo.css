@@ -101,3 +101,32 @@ body {
 
     text-decoration: none;
 }
+
+.campos {
+    display: flex;
+    flex-direction: column;
+    gap: 2cqh;
+    margin-bottom: 1.5%;
+}
+
+.campo {
+    width: 100%;
+    height: 10cqh;
+
+    padding-left: 1.5cqw;
+
+    font-size: 1.6cqw;
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #173653;
+    background-color: #ffffff;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 1cqw;
+
+    outline: none;
+}
+
+.campo:focus {
+    border-color: #2859a6;
+}
