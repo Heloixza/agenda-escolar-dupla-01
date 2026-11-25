@@ -1,0 +1,13 @@
+CREATE DATABASE gus_ana_bd;
+USE gus_ana_bd;
+
+CREATE TABLE alunos (
+	id_alunos INT PRIMARY KEY AUTO_INCREMENT,
+	nome_alunos VARCHAR(150) NOT NULL,
+	email_alunos VARCHAR(150) NOT NULL UNIQUE,
+    senha VARCHAR(150) NOT NULL
+);
+
+CREATE TABLE tarefas (
+
+);
