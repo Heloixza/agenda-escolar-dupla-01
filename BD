@@ -2,12 +2,19 @@ CREATE DATABASE gus_ana_bd;
 USE gus_ana_bd;
 
 CREATE TABLE alunos (
-	id_alunos INT PRIMARY KEY AUTO_INCREMENT,
+	alunos_id INT PRIMARY KEY AUTO_INCREMENT,
 	nome_alunos VARCHAR(150) NOT NULL,
 	email_alunos VARCHAR(150) NOT NULL UNIQUE,
     senha VARCHAR(150) NOT NULL
 );
 
 CREATE TABLE tarefas (
-
+	id_tarefas INT PRIMARY KEY AUTO_INCREMENT,
+    alunos_id INT NOT NULL,
+    titulo VARCHAR(150) NOT NULL,
+    tipo ENUM('Prova', 'Trabalho', 'Outra') NOT NULL,
+    data_entrega DATE NOT NULL,
+	descricao TEXT NULL,
+    lembrete_email BOOLEAN NOT NULL DEFAULT 0,
+    FOREIGN KEY (alunos_id) REFERENCES alunos(alunos_id)
 );
